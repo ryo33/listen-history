@@ -1,0 +1,27 @@
+<h2><%= @user.display %><small>@<%= @user.name %></small> Plays</h2>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Play <small>(Umimplemented)</small></th>
+      <th>Song</th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for play <- @plays do %>
+    <tr>
+      <td>
+        <button class="btn btn-sm btn-primary" disabled>Play on Spotify</button>
+        <button class="btn btn-sm btn-primary" disabled>Play on Apple Music</button>
+      </td>
+      <td><%= link play.song.name, to: song_path(@conn, :show, play.song.id) %></td>
+      <td><%= link play.song.artist.name, to: artist_path(@conn, :show, play.song.artist.id) %></td>
+      <td><%= play.song.album %></td>
+      <td><%= raw time play.inserted_at %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

@@ -1,0 +1,12 @@
+<h2>Show API Key</h2>
+
+<%= link "Update User Secret", to: user_path(@conn, :update_api_key), method: "post", class: "btn btn-danger" %>
+<table>
+  <tr><td>User ID:</td><td><strong><%= @user.id %></strong></td></tr>
+  <tr><td>User Secret:</td><td><strong><%= @user.api_key %></strong></td></tr>
+  <tr></tr>
+  <tr><td>Combined Key:</td><td><strong><%= @user.id %>_<%= @user.api_key %></strong></td></tr>
+</table>
+
+<%= link "Edit", to: user_path(@conn, :edit, @user), class: "btn btn-default" %>
+<%= link "Back", to: user_path(@conn, :index), class: "btn btn-default" %>

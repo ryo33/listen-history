@@ -1,0 +1,17 @@
+<style>
+#sign-in-with-google {
+  display: block;
+  width: 382px;
+  height: 92px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("<%= static_path(@conn, "/images/btn_google_signin_light_normal_web@2x.png") %>");
+}
+#sign-in-with-google:hover {
+  background-image: url("<%= static_path(@conn, "/images/btn_google_signin_light_focus_web@2x.png") %>");
+}
+#sign-in-with-google:active {
+  background-image: url("<%= static_path(@conn, "/images/btn_google_signin_light_pressed_web@2x.png") %>");
+}
+</style>
+<a href="/auth/google" id="sign-in-with-google"></a>

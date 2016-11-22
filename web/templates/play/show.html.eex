@@ -1,0 +1,31 @@
+<h2>Show play</h2>
+
+<ul>
+  <li>
+    <strong>Time:</strong>
+    <%= @play.inserted_at %>
+  </li>
+
+  <li>
+    <strong>User:</strong>
+    <a href="<%= user_path(@conn, :show, @play.user.name) %>">
+      <%= @play.user.display %>@<small><%= @play.user.name %></small>
+    </a>
+  </li>
+
+  <li>
+    <strong>Artist:</strong>
+    <%= link @play.song.artist.name, to: artist_path(@conn, :show, @play.song.artist.id) %>
+  </li>
+
+  <li>
+    <strong>Song Name:</strong>
+    <%= link @play.song.name, to: song_path(@conn, :show, @play.song.id) %>
+  </li>
+
+  <li>
+    <strong>Album:</strong>
+    <%= @play.song.album %>
+  </li>
+
+</ul>

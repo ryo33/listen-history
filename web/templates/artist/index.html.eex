@@ -1,0 +1,16 @@
+<h2>Listing artists</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for artist <- @artists do %>
+    <tr>
+      <td><%= link artist.name, to: artist_path(@conn, :show, artist.id) %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

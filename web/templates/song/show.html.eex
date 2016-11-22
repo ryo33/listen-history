@@ -1,0 +1,21 @@
+<h2>Show song</h2>
+
+<ul>
+  <li>
+    <strong>Artist:</strong>
+    <%= link @song.artist.name, to: artist_path(@conn, :show, @song.artist.id) %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @song.name %>
+  </li>
+
+  <li>
+    <strong>Album:</strong>
+    <%= @song.album %>
+  </li>
+</ul>
+<strong>Umimplemented:</strong>
+<button class="btn btn-primary" disabled>Play on Spotify</button>
+<button class="btn btn-primary" disabled>Play on Apple Music</button>
