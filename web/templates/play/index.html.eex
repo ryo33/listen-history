@@ -1,5 +1,7 @@
 <h2>Recently Plays</h2>
 
+<a class="btn btn-primary btn-lg" href="<%= user_path(@conn, :api_key) %>">Sync your playing</a>
+
 <table class="table table-bordered">
   <thead>
     <tr>
