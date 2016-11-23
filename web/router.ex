@@ -21,7 +21,7 @@ defmodule Musiclog.Router do
   scope "/", Musiclog do
     pipe_through [:browser, :browser_auth]
 
-    get "/", PageController, :index
+    get "/", PlayController, :index
     resources "/users", UserController, only: [:index, :show, :edit, :update]
     resources "/artists", ArtistController, only: [:index, :show]
     resources "/songs", SongController, only: [:index, :show]

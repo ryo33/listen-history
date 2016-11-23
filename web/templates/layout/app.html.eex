@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Musiclog!</title>
+    <title>Listen History</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
@@ -16,7 +16,7 @@
       <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">MusicLog</a>
+            <a class="navbar-brand" href="#">Listen History</a>
           </div>
           <ul class="nav navbar-nav navbar-left">
             <li><a href="<%= play_path(@conn, :index) %>">Plays</a></li>
@@ -30,7 +30,8 @@
                   <%= current_user(@conn).name %> <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a href="<%= user_path(@conn, :api_key) %>">Show API Key</a></li>
+                  <li><a href="<%= user_path(@conn, :show, current_user(@conn).name) %>">Your profile</a></li>
+                  <li><a href="<%= user_path(@conn, :api_key) %>">Show API key</a></li>
                   <li><a href="<%= auth_path(@conn, :delete) %>">Logout</a></li>
                 </ul>
               </li>
