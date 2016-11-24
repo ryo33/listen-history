@@ -1,19 +1,15 @@
 # Musiclog
+A music SNS for the streaming age.
 
-To start your Phoenix app:
+## Sync
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Start Phoenix endpoint with `mix phoenix.server`
+### Spotify
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+### iTunes (Apple Music)
+[ryo33/listen-history-itunes](https://github.com/ryo33/listen-history-itunes)
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+### Google Play Music
 
-## Learn more
+## API
+[Listen History API](https://gist.github.com/ryo33/443f63870e830c17fdcab913b7ce47eb)
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
