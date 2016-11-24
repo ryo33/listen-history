@@ -29,3 +29,9 @@
   </li>
 
 </ul>
+
+<hr>
+
+<%= if logged_in?(@conn) and current_user(@conn).id == @play.user_id do
+  link "Delete this play", to: play_path(@conn, :delete, @play.id), method: "DELETE", class: "btn btn-danger btn-sm"
+end %>

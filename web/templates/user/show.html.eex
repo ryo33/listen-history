@@ -20,7 +20,7 @@
       <td><%= link play.song.name, to: song_path(@conn, :show, play.song.id) %></td>
       <td><%= link play.song.artist.name, to: artist_path(@conn, :show, play.song.artist.id) %></td>
       <td><%= play.song.album %></td>
-      <td><%= raw time play.inserted_at %></td>
+      <td><%= link raw(time(play.inserted_at)), to: play_path(@conn, :show, play.id) %></td>
     </tr>
 <% end %>
   </tbody>

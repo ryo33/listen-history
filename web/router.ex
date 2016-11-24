@@ -25,7 +25,7 @@ defmodule Musiclog.Router do
     resources "/users", UserController, only: [:index, :show, :edit, :update]
     resources "/artists", ArtistController, only: [:index, :show]
     resources "/songs", SongController, only: [:index, :show]
-    resources "/plays", PlayController, only: [:index, :show]
+    resources "/plays", PlayController, only: [:index, :show, :delete]
 
     get "/api-key", UserController, :api_key
     post "/api-key/update", UserController, :update_api_key

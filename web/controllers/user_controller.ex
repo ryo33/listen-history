@@ -4,14 +4,7 @@ defmodule Musiclog.UserController do
   alias Musiclog.User
   alias Musiclog.Play
 
-  plug Guardian.Plug.EnsureAuthenticated, %{handler: __MODULE__} when action in [:api_key, :update_api_key]
-
-  def unauthenticated(conn, params) do
-    conn
-    |> put_status(401)
-    |> put_flash(:error, "Authentication required")
-    |> redirect(to: "/")
-  end
+  plug Guardian.Plug.EnsureAuthenticated, %{handler: Musiclog.GuardianHandler} when action in [:api_key, :update_api_key]
 
   def api_key(conn, _params) do
     user = Guardian.Plug.current_resource(conn)
